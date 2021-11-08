@@ -17,3 +17,9 @@ const buttons=document.querySelectorAll("button");
 for(let button of buttons){
     button.addEventListener("click",saveAppointment);
 }
+function saveAppointment(e){
+    const button=e.currentTarget;
+    const hour=button.parentElement.id;
+    const appointment=button.previousElementSibling.value;
+    localStorage.setItem(hour,appointment);
+}
