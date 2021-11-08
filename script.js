@@ -4,3 +4,11 @@ const datestring=date.toLocaleDateString();
 const hour=date.getHours();
 $("#currentday").text(datestring);
 $("#hour"+hour).addClass("present");
+
+const rows=document.querySelectorAll(".row");
+for (let row of rows){
+    const appointment=localStorage.getItem(row.id);
+    if(appointment){
+        row.querySelector("textarea").value=appointment;
+    }
+}
