@@ -12,3 +12,8 @@ for (let row of rows){
         row.querySelector("textarea").value=appointment;
     }
 }
+
+const buttons=document.querySelectorAll("button");
+for(let button of buttons){
+    button.addEventListener("click",saveAppointment);
+}
